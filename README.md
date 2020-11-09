@@ -1,6 +1,6 @@
 # Number_Baseball_AI
 
-# Ｆile list
+# File list
     ※ html 파일
         - index.html    : 기본 베이스 html 파일
         - 
@@ -24,7 +24,7 @@
         https://www.fontspace.com/old-sport-athletic-font-f29866
 
 
-# Ｆunction list
+# Function list
     ※ base_ai.js
         ※ ai_new_correct()
             - game play에 필요한 변수들을 초기화하는 함수
