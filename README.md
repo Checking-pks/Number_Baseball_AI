@@ -1,7 +1,8 @@
 # Number_Baseball_AI
 
 ## File list
-#### ※ html 파일
+### ※ html 파일
+======
         - index.html    : 기본 베이스 html 파일
         - 
 
