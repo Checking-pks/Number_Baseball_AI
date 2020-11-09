@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>Number Baseball Game</title>
+
+	<!-- css, js 링크 -->
+	<link href="css/reset.css" rel="stylesheet" type="text/css">
+	<link href="css/lobby.css" rel="stylesheet" type="text/css">
+    <link href="css/option.css" rel="stylesheet" type="text/css">
+    <link href="css/in_game.css" rel="stylesheet" type="text/css">
+    <link href="css/confirm.css" rel="stylesheet" type="text/css">
+
+	<script src="js/lobby.js"></script>
+    <script src="js/option.js"></script>
+    <script src="js/easter_egg.js"></script>
+    <script src="js/in_game.js"></script>
+    <script src="js/confirm.js"></script>
+
+    <script src="js/playing.js"></script>
+    <script src="js/ai/base_ai.js"></script>
+    <script src="js/ai/ai_1.js"></script>
+</head>
+
+<body id ="body" onload="play_button_move()">
+    <!-- lobby -->
+	<div id="lobby">
+		<div id="logo">
+			<img src="img/logo.png" alt="logo" width="80%" onclick="easter_background()">
+        </div>
+        <div id="play_button" onclick="play_button()">
+            PLAY
+        </div>
+        <div id="option_button" onclick="option_button()">
+            OPTION
+        </div>
+    </div>
+    
+    <!-- option -->
+    <div id="option">
+        <div id = "option_header">
+            options
+        </div>
+        <div class ="option_container">
+            <div id ="option1">
+                game mode
+            </div>
+            <div id ="option1_content">
+                <div class="option1_mode" onclick="option1_select(this)" style="background : white; color : #0b214e">AI</div> 
+                <div class="option1_mode" onclick="option1_select(this)">single</div>
+            </div>
+        </div>   
+        <div class ="option_container">
+            <div id ="option2">
+                
+            </div>
+            <div id ="option1_content">
+                
+            </div>
+        </div>
+        <div id = "back_button" onclick="option_out()">
+            back
+        </div>
+    </div>
+
+    <!-- in_game -->
+    <div id ="in_game">
+        <!-- 상단 아이콘 -->
+        <div id="banner_icon_container">
+            <img id="home_icon"src="img/home_icon.png" alt="" onclick="show_confirm(0)" >
+            <img id ="replay_icon"src="img/replay_icon.png" alt="" onclick="show_confirm(1)">
+        </div>
+        <!-- 턴 알림 문자 -->
+        <div id = "turn_information">your turn!</div>
+        <!-- 메인 입출력창 -->
+        <div id ="main_io">
+            <!-- 4자리 정답칸 -->
+            <div class ="answer_container">
+                <div class ="answer" onclick="answer_focus_manual(this)"></div>
+                <div class ="answer" onclick="answer_focus_manual(this)"></div>
+                <div class ="answer" onclick="answer_focus_manual(this)"></div>
+                <div class ="answer" onclick="answer_focus_manual(this)"></div>
+            </div>
+            <!-- 스트라이크와 볼 정보 --> 
+            <div id ="strike_ball_container">
+                <div id ="log_info"></div>
+            </div>
+        </div>
+
+        <!-- 메인 정보창 -->
+        <div id ="key_pad">
+            <form id="key_pad_form"action="">
+                <input type="button" name="key" value="1" onclick="put(this)">
+                <input type="button" name="key" value="2" onclick="put(this)">
+                <input type="button" name="key" value="3" onclick="put(this)"><br>
+
+                <input type="button" name="key" value="4" onclick="put(this)">
+                <input type="button" name="key" value="5" onclick="put(this)">
+                <input type="button" name="key" value="6" onclick="put(this)"><br>
+
+                <input type="button" name="key" value="7" onclick="put(this)">
+                <input type="button" name="key" value="8" onclick="put(this)">
+                <input type="button" name="key" value="9" onclick="put(this)"><br>
+                
+                <input type="button" name="key" value="del" style = "color : #b11219" onclick="put(this)">
+                <input type="button" name="key" value="0" onclick="put(this)">
+                <input type="button" name="key" value="enter" onclick="enter_number()"><br>
+            </form>
+        </div>
+        <div id ="log"><textarea name="name" id="log_field" readonly disabled></textarea></div>
+        <!-- 하단 버튼 -->
+        <div id="ctr_button_container">
+            <div id ="key_pad_button" onclick="key_pad_on()">key pad</div>
+            <div id ="log_button" onclick="log_on()">log</div>
+        </div>
+    </div>
+    <!-- 커스텀 confirm 창, lobby.css,js에서 수정-->
+    <div id = "custom_confirm">
+        <div id = "custom_confirm_img_container">
+            <img src="img/x.png" alt="" width="100%" height="100%" onclick="hide_confirm()">
+        </div>
+        <div id ="custom_confirm_header">Are you sure?</div>
+        <div id = "custom_confirm_str">The game won't be saved.</div>
+        <div id = "custom_confirm_button_container">
+            <div class = "custom_confirm_button" onclick="confirm_work(0)">cancle</div>
+            <div class = "custom_confirm_button" onclick="confirm_work(1)" style="color:rgb(17, 150, 46);">confirm</div>
+        </div>
+    </div>
+    <!-- confirm을 위한 필터 -->
+    <div id = "confirm_filter"></div>
+  </body>
+</html>

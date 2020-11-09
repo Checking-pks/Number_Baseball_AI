@@ -1,0 +1,24 @@
+/*Logo Margin 설정*/
+#logo {
+    margin-top: 15vh;
+    margin-left: 2.5vh;
+}
+
+/*Play 버튼, Option 버튼 설정*/
+#play_button, #option_button {
+    margin: auto;
+    margin-top: 10vh;
+
+    width: 75vw;
+    height: 10vh;
+    border: 1vw solid #ffffff;
+    border-radius: 5vw;
+
+    background: linear-gradient(180deg, #ffffff 60%, #cfcfcf 40%);
+    font-family: "baseball_font";
+    font-size: 15vw;
+    color: #0b214e;
+    line-height: 10vh;
+
+    position: relative;
+}

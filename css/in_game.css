@@ -1,0 +1,151 @@
+#in_game{
+    width: 100vw;
+    height: 100vh;
+
+    overflow: hidden;
+    position: absolute;
+    left:0;
+    top:0;
+    z-index: -2;
+    background: #0b214e;
+}
+
+/*아이콘 이미지 부모객체*/
+#banner_icon_container{
+    display: flex;
+    justify-content: space-between;
+    margin: 2vh 2vh;
+}
+
+/*인게임 상단 턴정보*/
+#turn_information{
+    font-family: "baseball_font";
+    font-size: 8vw;
+    margin: 5vh 5vw;
+    color:#ffffff;
+}
+
+/*정답박스 4개의 부모객체*/
+.answer_container{      
+    color:#0b214e; 
+    font-family: "baseball_font";
+    font-size: 8vw;
+    margin: 5vh 5vw;
+    padding: 0 35vw;
+
+    display: flex;
+    justify-content: space-between;
+
+    transition: padding 0.5s;
+}
+
+/*정답박스 4개*/
+.answer{
+    width:8vh;
+    height: 8vh;
+    line-height: 8vh;
+    background: white;
+    border-radius: 0.5vw;
+    border: 1vw solid rgba(0, 0, 0, 0.726);
+}
+
+/*스트라이크와 볼 정보의 부모객체*/
+#strike_ball_container{
+    color:white;
+    font-family: "baseball_font";
+    font-size: 8vw;
+    margin: 5vh 5vw;
+    padding: 0 15vw;
+
+    opacity: 0;
+    text-align: center;
+}
+
+/*로그와 키패드 각각의 부모객체*/
+#key_pad, #log{
+    width: 98vw;
+    height: 30vh;
+    background: white;
+    border-right: 1vw solid #0b214e;
+    border-left: 1vw solid #0b214e;
+    font-family: "baseball_font";
+    color:#0b214e;
+
+    position: absolute;
+    bottom: 11vh;
+}
+#key_pad{
+    z-index:2;
+}
+
+/*키패드표시 선택하는 버튼*/
+#key_pad_button{
+    width:48.5vw;
+    height:10vh;
+
+    position: absolute;
+    bottom: 0;
+    left:0;
+
+    border: 1vw solid #0b214e;
+    border-right: 0.5vw solid #0b214e;
+    /*border-top: 1vw solid white;*/
+    background: linear-gradient(180deg, #ffffff 60%, #cfcfcf 40%);
+    font-family: "baseball_font";
+    font-size: 8vw;
+    color: #0b214e;
+    line-height: 10vh;
+}
+
+/*로그표시 선택하는 버튼*/
+#log_button{
+    width:48.5vw;
+    height:10vh;
+
+    position: absolute;
+    bottom: 0;
+    right:0;
+
+    border: 1vw solid #0b214e;
+    border-left: 0.5vw solid #0b214e;
+    background: linear-gradient(180deg, #ffffff 60%, #cfcfcf 40%);
+    font-family: "baseball_font";
+    font-size: 8vw;
+    color: #0b214e;
+    line-height: 10vh;
+}
+
+/*키패드 버튼들 부모객체*/
+#key_pad_form{
+    margin-top: 0.5vh;
+}
+
+/*키패드 버튼들*/
+#key_pad input{
+    width:30vw;
+    height: 6.3vh;
+    margin:0.5vh 0.25vh;
+    color: #0b214e;
+    font-family: "baseball_font";
+    font-size: 5vw;
+    border-radius: 1vw;
+    border: 0.8vw solid #0b214e;
+
+    background: linear-gradient(180deg, #ffffff 60%, #cfcfcf 40%);
+}
+
+/*텍스트 에리아*/
+#log_field{
+    font-family: "baseball_font";
+    color:#0b214e;
+    font-size: 3.5vh;
+
+    padding: 0;
+    resize: none;
+    width: 100%;
+    height: 100%;
+    border:0;
+    
+    position: relative;
+    z-index: -1;
+}

@@ -1,0 +1,18 @@
+/*field 기본 설정*/
+* {
+    text-align: center;
+    margin: 0;
+}
+
+html, body {
+    width: 100vw;
+    height: 100vh;
+    background: #0b214e;
+    overflow: hidden;
+}
+
+/*폰트 설정*/
+@font-face {
+    font-family: "baseball_font";
+    src: url("/font/baseball_font.ttf");
+}

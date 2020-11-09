@@ -1,0 +1,64 @@
+#option{
+    background: #0b214e;
+    width: 100vw;
+    height: 100vh;
+
+    position: absolute;
+    left:0;
+    top:0;
+
+    z-index: -2;
+}
+
+#back_button{
+    width: 75vw;
+    height: 10vh;
+
+    border: 1vw solid #ffffff;
+    border-radius: 5vw;
+    background: linear-gradient(180deg, #ffffff 60%, #cfcfcf 40%);
+
+    font-family: "baseball_font";
+    font-size: 15vw;
+    color: #0b214e;
+    line-height: 10vh;
+
+    position: absolute;
+    bottom: 7vh;
+    left:50%;
+    transform:translate(-50%,0);
+
+    opacity: 0%;
+    transition-timing-function: ease;
+}
+
+#option_header{
+    padding: 2vh;
+
+    color:white;
+    font-size: 10vw;
+    line-height: 6vh;
+    border-bottom: 2px solid white;
+    font-family: "baseball_font";
+}
+
+.option_container{
+    color: white;
+    font-family: "baseball_font";
+    font-size: 6vw;
+    line-height: 6vh;
+    
+    padding: 3vh 5vw 0 5vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.option1_mode{
+    display: inline-block;
+    padding: 0 1.5vw;
+    margin: 0 1vw;
+    font-size: 5vw;
+    border-radius: 0.5vh;
+    height:4vh;
+    line-height: 4vh;
+}

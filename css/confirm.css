@@ -1,0 +1,60 @@
+/*커스텀 confirm 창*/
+#custom_confirm{
+    width: 79vw;
+    height: 20vh;
+    background: white;
+    color: #0b214e;
+    font-family: "baseball_font";
+
+    position: absolute;
+    left: 10.5vw;
+    top: 34.5vh; /*20vh는 answer에 위치*/
+
+    z-index: -2;
+}
+
+#custom_confirm_img_container{
+    width:7vw;
+    height:7vw;
+
+    position: absolute;
+    top:1vw;
+    right:1vw;
+}
+
+#custom_confirm_header{
+    margin-top: 4vw;
+    margin-bottom: 1vw;
+    font-size: 7vw;
+}
+
+#custom_confirm_button_container{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 5vw;
+    padding: 0 10vw;
+}
+
+.custom_confirm_button{
+    width: 25vw;
+    height: 3.5vh;
+    line-height: 3.5vh;
+    color:#0b214e;
+    border: 0.8vw solid #0b214e;
+    border-radius: 2vw;
+    background: linear-gradient(180deg, #ffffff 60%, #cfcfcf 40%);
+}
+
+/*confirm을 위한 필터*/
+#confirm_filter{
+    width: 100vw;
+    height: 100vh;
+    background: black;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0%;
+    transition: opacity 0.5s;
+    z-index: -3;
+}
