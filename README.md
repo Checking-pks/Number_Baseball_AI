@@ -2,9 +2,8 @@
 
 ## File list
 ### ※ html 파일
-======
-        - index.html    : 기본 베이스 html 파일
-        - 
+<ul> index.html    : 기본 베이스 html 파일
+<ul>
 
     ※ css 파일
         - reset.css     : 기본 베이스 css 파일
