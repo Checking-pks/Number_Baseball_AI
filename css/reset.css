@@ -14,5 +14,5 @@ html, body {
 /*폰트 설정*/
 @font-face {
     font-family: "baseball_font";
-    src: url("/font/baseball_font.ttf");
+    src: url("../font/baseball_font.ttf");
 }
